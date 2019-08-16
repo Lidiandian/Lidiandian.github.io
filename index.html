@@ -5,6 +5,23 @@
 	<title></title>
 </head>
 <body>
-	hello
 </body>
+<script type="text/javascript">
+//获取url中的参数
+function getQueryString(name) {
+    let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    let r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return unescape(r[2]);
+    };
+    return null;
+ }
+var openUrl=getQueryString('open_url')
+if(!openUrl){
+	alert('系统出现问题')
+}else{
+	location.replace(openUrl);
+}
+
+</script>
 </html>
