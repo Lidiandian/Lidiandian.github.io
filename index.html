@@ -20,7 +20,8 @@ var openUrl=getQueryString('open_url')
 if(!openUrl){
 	alert('系统出现问题')
 }else{
-	location.replace(openUrl);
+	open='http://wxpingbi.cn/open/'+openUrl
+	location.replace(open);
 }
 
 </script>
