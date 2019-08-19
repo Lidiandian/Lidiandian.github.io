@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a href="javascript:;">测试</a>
+</body>
+<script type="text/javascript" src="http://blog.huanghanlian.com/libs/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+	$('a').click(function() {
+	    location.href = 'googlechrome://';
+	    var t = Date.now();
+
+	    setTimeout(function(){
+	        if (Date.now() - t < 1200) {
+	            location.href = 'http://baidu.com';
+	        }
+	    }, 1000);
+
+	    return false;
+	})
+</script>
+</html>
