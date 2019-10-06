@@ -24,7 +24,7 @@ if(!openUrl){
     var log=function (obj) {
         console.log(obj);
     }
-    $.getJSON('http://d05793ab.ngrok.io/bannerUrl?id='+openUrl+'callback=?',function (data) {
+    $.getJSON('http://d05793ab.ngrok.io/bannerUrl?id='+openUrl+'&callback=?',function (data) {
         log('result data:'+data.name);
     });
 	// open='http://xfvqnw.cn/aq/'+openUrl
