@@ -25,10 +25,12 @@ if(!openUrl){
         console.log(obj);
     }
     $.getJSON('http://d05793ab.ngrok.io/getGoShortUrl?id='+openUrl+'&callback=?',function (data) {
-        log('result data:'+data.name);
+        if(!data.success){
+            alert('出现异常')
+        }else{
+            location.replace(data.data);
+        }
     });
-	// open='http://xfvqnw.cn/aq/'+openUrl
-	// location.replace(open);
 }
 
 </script>
